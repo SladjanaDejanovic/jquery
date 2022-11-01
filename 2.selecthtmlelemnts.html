@@ -7,17 +7,17 @@
       .bluebox {
         background-color: #3a5795;
         color: white;
-        height: 100px;
+        height: auto;
         width: auto;
       }
       .yellowbox {
         background-color: rgb(222, 224, 85);
-        height: 100px;
+        height: auto;
         width: auto;
       }
       .greenbox {
         background-color: #31af37;
-        height: 100px;
+        height: auto;
         width: auto;
       }
       #great {
@@ -41,9 +41,19 @@
       <p>Apple.</p>
       <p><a href="#">This is a link</a></p>
       <p><a href="#">This is another link</a></p>
+      <p>
+        Type your name: <input type="text" /><button type="submit">
+          Submit
+        </button>
+      </p>
     </div>
     <div class="greenbox">
       <p>Microsoft.</p>
+      <ul>
+        <li>BMW</li>
+        <li>Audi</li>
+        <li>Mercedes</li>
+      </ul>
     </div>
     <script>
       $(function () {
@@ -65,6 +75,13 @@
         // $("p:first-child").css("text-decoration", "underline");
         //to use both first and last child, we can put them together:
         $("p:first-child, p:last-child").css("text-decoration", "underline");
+
+        $("[href]").css("color", "red");
+        $("li:first-child, li:last-child").css("background-color", "#fff");
+        $(":input").css("background-color", "pink");
+        $(":Submit").css("background-color", "#32a9");
+        //every div that has something, in this case list
+        $("div:has(li)").css("background-color", "rgba(107, 180, 198, 0.7");
       });
     </script>
   </body>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>change html content</title>
+    <style>
+      .bluebox {
+        background-color: #3a5795;
+        color: white;
+        height: 100px;
+        width: auto;
+      }
+      .yellowbox {
+        background-color: rgb(222, 224, 85);
+        height: 100px;
+        width: auto;
+      }
+      .greenbox {
+        background-color: #31af37;
+        height: 100px;
+        width: auto;
+      }
+      #great {
+        background-color: #5a3479;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is
+        <span id="great"> great </span>
+        .
+      </p>
+      <p class="orange">Paragraph2</p>
+      <p>Paragraph3</p>
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>Apple.</p>
+      <p><a href="#">This is a link</a></p>
+      <p><a href="#">This is another link</a></p>
+    </div>
+    <div class="greenbox">
+      <p>Microsoft.</p>
+    </div>
+    <script>
+      $(function () {
+        //* is for selecting all html elements
+        $("*").css("font-size", "18px"); //then declaring css i u zagradi sta hocemo da promenimo and its value
+        // $("p").css("text-align", "center");
+        //ovo iznad je selecting every paragraph
+        // $("div > p").css("text-align", "center"); //paragraphs that are children of divs
+        //div ~ p  === p that are siblings of divs
+        $("div  p").css("text-align", "center"); //(div  p) === p that are decendants of div
+
+        // access elements by id:
+        $("#great").css("background-color", "#31af37");
+        //to get elements by class:
+        $(".orange").css("background-color", "orange");
+        //divs of class bluebox
+        $("div.bluebox").css("font-family", "sans-serif");
+        //p that are first child of another element:
+        // $("p:first-child").css("text-decoration", "underline");
+        //to use both first and last child, we can put them together:
+        $("p:first-child, p:last-child").css("text-decoration", "underline");
+      });
+    </script>
+  </body>
+</html>

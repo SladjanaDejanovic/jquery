@@ -45,7 +45,10 @@
       <p><a href="#">This is a link</a></p>
       <p><a href="#">This is another link</a></p>
       <p>
-        Type your name: <input type="text" /><button type="submit">
+        Type your name: <input id="input" type="text" /><button
+          id="submit"
+          type="submit"
+        >
           Submit
         </button>
       </p>
@@ -67,10 +70,24 @@
         // $(this).css("background-color", "red");
         // });
         $("p").mouseover(function () {
-          $(this).css("background-color", "blue");
+          $(this).css("background-color", "#C5B8F1");
         });
         $("p").mouseout(function () {
           $(this).css("background-color", "");
+        });
+        $("input").focus(function () {
+          $(this).css("background-color", "yellow");
+        });
+        $("input").blur(function () {
+          $(this).css("background-color", "grey");
+        });
+        $("input").keyup(function () {
+          $(this).css("background-color", "orange");
+        });
+        // when we click on button all value in input to disappear:
+        $("#submit").click(function () {
+          $("#input").css("background-color", "white");
+          $("#input").val("");
         });
       });
     </script>

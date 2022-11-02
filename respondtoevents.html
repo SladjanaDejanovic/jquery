@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Respond to events</title>
+
+    <style>
+      .bluebox {
+        background-color: #3a5795;
+        color: white;
+        height: auto;
+        width: auto;
+      }
+      .yellowbox {
+        background-color: rgb(222, 224, 85);
+        height: auto;
+        width: auto;
+      }
+      .greenbox {
+        background-color: #31af37;
+        height: auto;
+        width: auto;
+      }
+      #great {
+        background-color: #5a3479;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is
+        <span id="great"> great </span>
+        .
+      </p>
+      <p class="orange">Paragraph2</p>
+      <p>Paragraph3</p>
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>Apple.</p>
+      <p><a href="#">This is a link</a></p>
+      <p><a href="#">This is another link</a></p>
+      <p>
+        Type your name: <input type="text" /><button type="submit">
+          Submit
+        </button>
+      </p>
+    </div>
+    <div class="greenbox">
+      <p>Microsoft.</p>
+      <ul>
+        <li>BMW</li>
+        <li>Audi</li>
+        <li>Mercedes</li>
+      </ul>
+    </div>
+    <script>
+      $(function () {
+        // $("p").click(function () {
+        //selecting every p:
+        // $("p").css("background-color", "red");
+        //selecting only p that  is clicked on:
+        // $(this).css("background-color", "red");
+        // });
+        $("p").mouseover(function () {
+          $(this).css("background-color", "blue");
+        });
+        $("p").mouseout(function () {
+          $(this).css("background-color", "");
+        });
+      });
+    </script>
+  </body>
+</html>

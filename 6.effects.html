@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuerye effects</title>
+    <style>
+      .bluebox {
+        background-color: #3a5795;
+        color: white;
+        height: 100px;
+        width: 300px;
+      }
+      .yellowbox {
+        background-color: rgb(222, 224, 85);
+        height: 100px;
+        width: auto;
+      }
+      .greenbox {
+        background-color: #31af37;
+        height: 100px;
+        width: auto;
+      }
+      #great {
+        background-color: #5a3479;
+      }
+
+      p {
+        margin: 0;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <button id="fadeOutFacebook">FadeOut Facebook</button>
+    <button id="fadeInFacebook">FadeIn Facebook</button>
+    <button id="fadeToggleFacebook">Fade Toggle</button>
+    <button id="animate">Animate</button>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is
+        <span id="great"> great </span>
+      </p>
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>Apple.</p>
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p id="microsoftParagraph">Microsoft.</p>
+      <p>
+        <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink"
+          >Microsoft Link</a
+        >
+      </p>
+    </div>
+    <p>Enter your name:<input type="text" /></p>
+    <script src="js/effects.js"></script>
+  </body>
+</html>

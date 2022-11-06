@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery UI</title>
+    <style>
+      .bluebox {
+        background-color: #3a5795;
+        color: white;
+        height: 100px;
+        width: auto;
+      }
+      .yellowbox {
+        background-color: rgb(222, 224, 85);
+        height: 100px;
+        width: auto;
+      }
+      .greenbox {
+        background-color: #31af37;
+        height: 100px;
+        width: auto;
+      }
+      #great {
+        background-color: #5a3479;
+      }
+
+      #error {
+        height: 100px;
+        margin-top: 20px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="js/jqueryui.js"></script>
+  </head>
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is
+        <span id="great"> great </span>
+      </p>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple">
+      <p>Apple.</p>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+      <p id="microsoftParagraph">Microsoft.</p>
+      <p>
+        <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink"
+          >Microsoft Link</a
+        >
+      </p>
+    </div>
+    <p>Enter your name:<input type="text" /></p>
+    <div class="ui-state-error" id="error">
+      <p>Error Message</p>
+    </div>
+  </body>
+</html>

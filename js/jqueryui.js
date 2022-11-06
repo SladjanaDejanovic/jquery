@@ -34,9 +34,15 @@ $(function () {
     },
   });
   $("#droppable").droppable({
-    drop: function () {
+    drop: function (event, ui) {
       $(this).css("background-color", "#21dd85");
+      $(this).find("p").remove();
+      $("<div></div>").text(ui.draggable.text()).appendTo(this);
     },
-    accept: "#facebook",
+    accept: "#list li",
+  });
+  $("#list").find("li").draggable({
+    helper: "clone",
+    appendTo: "body",
   });
 });

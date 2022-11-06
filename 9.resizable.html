@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jQuery UI introduction and Draggable/droppable</title>
+    <title>Resizable</title>
     <style>
       .bluebox {
         background-color: #3a5795;
@@ -26,17 +26,10 @@
         background-color: #5a3479;
       }
 
-      #error {
-        height: 100px;
-        margin-top: 20px;
-      }
-
-      #droppable {
-        background-color: #a21cbd;
+      #container {
         height: 300px;
-        width: auto;
-        margin-top: 20px;
-        color: white;
+        width: 300px;
+        border-style: dotted;
       }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -45,8 +38,7 @@
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-
-    <script src="js/jqueryui.js"></script>
+    <script src="js/resizable.js"></script>
   </head>
   <body>
     <div class="bluebox ui-corner-all" id="facebook">
@@ -55,13 +47,10 @@
         <span id="great"> great </span>
       </p>
     </div>
-    <div class="yellowbox ui-corner-all" id="apple">
-      <ul id="list">
-        <li>milk</li>
-        <li>eggs</li>
-        <li>bread</li>
-      </ul>
+    <div id="container">
+      <div class="yellowbox ui-corner-all" id="apple"><p>Apple</p></div>
     </div>
+
     <div class="greenbox ui-corner-all" id="microsoft">
       <p id="microsoftParagraph">Microsoft.</p>
       <p>
@@ -69,12 +58,6 @@
           >Microsoft Link</a
         >
       </p>
-    </div>
-    <div id="droppable" class="ui-corner-all">
-      <p>You can drop things here.</p>
-    </div>
-    <div class="ui-state-error" id="error">
-      <p>Error Message</p>
     </div>
   </body>
 </html>

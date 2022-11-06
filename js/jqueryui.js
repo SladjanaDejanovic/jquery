@@ -33,4 +33,10 @@ $(function () {
       $("#microsoft").html("<p>Finally!</p>");
     },
   });
+  $("#droppable").droppable({
+    drop: function () {
+      $(this).css("background-color", "#21dd85");
+    },
+    accept: "#facebook",
+  });
 });

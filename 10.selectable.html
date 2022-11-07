@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectable</title>
+    <style>
+      .bluebox {
+        background-color: #3a5795;
+        color: white;
+        height: 100px;
+        width: auto;
+      }
+      .yellowbox {
+        background-color: rgb(222, 224, 85);
+        height: auto;
+        width: auto;
+        padding: 10px;
+      }
+      .greenbox {
+        background-color: #31af37;
+        height: auto;
+        width: auto;
+      }
+      #great {
+        background-color: #5a3479;
+      }
+
+      li {
+        font-size: 2em;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      #list .ui-selecting {
+        background: #a139f7;
+      }
+
+      #list .ui-selected {
+        background: #241035;
+        color: white;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js/selectable.js"></script>
+  </head>
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is
+        <span id="great"> great </span>
+      </p>
+    </div>
+    <div id="container">
+      <div class="yellowbox ui-corner-all" id="apple">
+        <ul id="list">
+          <li class="ui-state-default">Audi</li>
+          <li class="ui-state-default">BMW</li>
+          <li class="ui-state-default">Mercedes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="greenbox ui-corner-all" id="microsoft">
+      <p id="microsoftParagraph">Microsoft.</p>
+      <p>
+        <a href="http://www.microsoft.com" title="microsoft" id="microsoftLink"
+          >Microsoft Link</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

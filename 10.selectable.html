@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selectable</title>
+    <title>Selectable and sortable</title>
     <style>
       .bluebox {
         background-color: #3a5795;
@@ -22,6 +22,7 @@
         background-color: #31af37;
         height: auto;
         width: auto;
+        padding: 10px;
       }
       #great {
         background-color: #5a3479;
@@ -41,6 +42,11 @@
         background: #241035;
         color: white;
       }
+
+      .connectedList {
+        border: 1px solid #eee;
+        min-height: 20px;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link
@@ -48,7 +54,7 @@
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <script src="js/selectable.js"></script>
+    <script src="js/selectable-sortable.js"></script>
   </head>
   <body>
     <div class="bluebox ui-corner-all" id="facebook">
@@ -59,10 +65,10 @@
     </div>
     <div id="container">
       <div class="yellowbox ui-corner-all" id="apple">
-        <ul id="list">
+        <ul id="list1" class="connectedList">
           <li class="ui-state-default">Audi</li>
           <li class="ui-state-default">BMW</li>
-          <li class="ui-state-default">Mercedes</li>
+          <li class="ui-state-default notSortable">Mercedes</li>
         </ul>
       </div>
     </div>
@@ -74,6 +80,11 @@
           >Microsoft Link</a
         >
       </p>
+      <ul id="list2" class="connectedList">
+        <li class="ui-state-default">Toyota</li>
+        <li class="ui-state-default">Ford</li>
+        <li class="ui-state-default">Chevrolet</li>
+      </ul>
     </div>
   </body>
 </html>

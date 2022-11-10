@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/eggplant/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js/button.js"></script>
+    <style>
+      .bluebox {
+        background-color: #3a5795;
+        color: white;
+        height: 100px;
+        width: auto;
+      }
+      .yellowbox {
+        background-color: rgb(222, 224, 85);
+        height: 100px;
+        width: auto;
+      }
+      .greenbox {
+        background-color: #31af37;
+        height: 100px;
+        width: auto;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <div id="checkboxes">
+      <input type="checkbox" id="checkbox1">
+    <label for="checkbox1">Audi</label>
+    <input type="checkbox" id="checkbox2">
+    <label for="checkbox2">BMW</label>
+    <input type="checkbox" id="checkbox3">
+    <label for="checkbox3">Mercedes</label>
+    </div>
+</div>
+    </div>
+    <div class="yellowbox ui-corner-all" id="apple"><input type="checkbox" id="myCheckbox">
+    <label for="myCheckbox">Checkbox</label></div>
+    <div class="greenbox ui-corner-all" id="microsoft">
+      <form>
+        <div id="radioBoxes">
+          <input type="radio" id="radioBox1" name="radioBoxes">
+          <label for="radioBox1">Ford</label>
+          <input type="radio" id="radioBox2" name="radioBoxes">
+          <label for="radioBox2">Toyota</label>
+          <input type="radio" id="radioBox3" name="radioBoxes">
+          <label for="radioBox3">Ferrari</label>
+        </div>
+      </form>
+       </div>
+      <button id="button1">Button 1</button>
+      <button id="button2">Button 2</button>
+      <button id="button3">Button 3</button>
+   
+  </body>
+</html>

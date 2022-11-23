@@ -14,6 +14,6 @@ $(function () {
   });
   $("#list2").sortable();
   $("#list1, #list2").sortable({
-    connectWith: ".connectedList",
+    connectWith: ".connectedList", //moving elements between lists
   });
 });

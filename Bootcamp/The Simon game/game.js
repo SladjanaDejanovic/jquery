@@ -31,22 +31,7 @@ const nextSequence = function () {
     //   }
     // );
 
-    // version 2
-    // $(this)
-    //   .css({
-    //     "box-shadow": "0 0 10px 5px white", // Add a white glow
-    //     "background-color": "white", // Change background color to white
-    //     opacity: "0.7",
-    //   })
-    //   .fadeOut(150, function () {
-    //     $(this);
-    //     // Complete the animation and restore the original color and remove the box-shadow
-    //     $(this).fadeIn(150).css({
-    //       "box-shadow": "none",
-    //       "background-color": originalColor,
-    //       opacity: originalOpacity,
-    //     });
-    //   });
+    
 
     //version 3
     // $(this)

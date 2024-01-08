@@ -1,57 +1,53 @@
 const buttonColors = ["red", "blue", "green", "yellow"];
 const gamePattern = [];
 const userClickedPattern = [];
+let level = 0;
+
 // const getButton = $("#" + randomChosenColor);
 
-const playSound = function (color) {
-  const audio = $(`#audio-${color}`)[0];
-  audio.currentTime = 0;
+//////////// my way
+// const playSound = function (color) {
+//   const audio = $(`#audio-${color}`)[0];
+//   audio.currentTime = 0;
+//   audio.play();
+//   console.log(audio);
+// };
+
+const playSound = function (name) {
+  var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
-  console.log(audio);
+};
+
+const animatePress = function (currentColor) {
+  $("#" + currentColor).addClass("pressed");
+  setTimeout(() => $("#" + currentColor).removeClass("pressed"), 100);
 };
 
 const nextSequence = function () {
   const randomNumber = Math.floor(Math.random() * 4);
   const randomChosenColor = buttonColors[randomNumber];
-  // const getButton = $("#" + randomChosenColor);
-  // animationAndSound(getButton);
+
   gamePattern.push(randomChosenColor);
+
+  playSound(randomChosenColor);
 
   $("#" + randomChosenColor)
     .fadeIn(100)
     .fadeOut(100)
     .fadeIn(100);
 
-  var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
-  audio.play();
+  level++;
 };
 
-// const animationAndSound = function (btn) {
-//   const originalColor = $(this).css("background-color");
+$(".btn").click(function () {
+  const userChosenColor = $(this).attr("id");
+  userClickedPattern.push(userChosenColor);
+  playSound(userChosenColor);
+  animatePress(userChosenColor);
+  console.log(userClickedPattern);
+});
 
-//   // play sound
-//   playSound(randomChosenColor);
-
-//   // animate button
-//   $(this)
-//     .css({
-//       "box-shadow": "0 0 20px 5px #346596",
-//       "background-color": "#346596",
-//     })
-//     .fadeOut({
-//       duration: 150,
-//       easing: "linear",
-//       done: function () {
-//         $(this).css("background-color", originalColor);
-//       },
-//     })
-//     .fadeIn({
-//       duration: 150,
-//       easing: "linear",
-//       done: function () {
-//         $(this).css("box-shadow", "none");
-//       },
-//     });
-// };
-
-// nextSequence();
+$(document).keypress(function () {
+  nextSequence();
+  $("h1").text(`Level ${level}`);
+});

@@ -1,5 +1,5 @@
 const buttonColors = ["red", "blue", "green", "yellow"];
-const gamePattern = [];
+let gamePattern = [];
 let userClickedPattern = [];
 let started = false;
 let level = 0;
@@ -30,10 +30,17 @@ const checkAnswer = function (currentLevel) {
       setTimeout(() => nextSequence(), 1000);
     }
   } else {
+    $("body").addClass("game-over");
+    setTimeout(() => $("body").removeClass("game-over"), 200);
+    $("h1").text("Game over. Press any key to restart.");
+    playSound("wrong");
+
     console.log("Wrong");
+    startOver();
   }
 };
 
+// Starting the game
 $(document).keypress(function () {
   if (!started) {
     $("h1").text("Level " + level);
@@ -72,3 +79,10 @@ $(".btn").click(function () {
 
   console.log(userClickedPattern);
 });
+
+const startOver = function () {
+  gamePattern = [];
+  userClickedPattern = [];
+  started = false;
+  level = 0;
+};

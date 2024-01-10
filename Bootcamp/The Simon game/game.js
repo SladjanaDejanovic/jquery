@@ -4,7 +4,7 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-//////////// my way
+//////////// my way for using audio
 // const playSound = function (color) {
 //   const audio = $(`#audio-${color}`)[0];
 //   audio.currentTime = 0;
@@ -24,7 +24,7 @@ const animatePress = function (currentColor) {
 
 const checkAnswer = function (currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
-    console.log("Successs");
+    // console.log("Successs");
 
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(() => nextSequence(), 1000);
@@ -35,7 +35,7 @@ const checkAnswer = function (currentLevel) {
     $("h1").text("Game over. Press any key to restart.");
     playSound("wrong");
 
-    console.log("Wrong");
+    // console.log("Wrong");
     startOver();
   }
 };
@@ -65,7 +65,7 @@ const nextSequence = function () {
     .fadeOut(100)
     .fadeIn(100);
 
-  console.log(gamePattern);
+  // console.log(gamePattern);
 };
 
 $(".btn").click(function () {
@@ -77,9 +77,10 @@ $(".btn").click(function () {
 
   checkAnswer(userClickedPattern.length - 1);
 
-  console.log(userClickedPattern);
+  // console.log(userClickedPattern);
 });
 
+// Restaring after game over
 const startOver = function () {
   gamePattern = [];
   userClickedPattern = [];

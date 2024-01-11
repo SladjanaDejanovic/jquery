@@ -24,8 +24,6 @@ const animatePress = function (currentColor) {
 
 const checkAnswer = function (currentLevel) {
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
-    // console.log("Successs");
-
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(() => nextSequence(), 1000);
     }
@@ -34,7 +32,6 @@ const checkAnswer = function (currentLevel) {
     setTimeout(() => $("body").removeClass("game-over"), 200);
     $("h1").text("Game over. Press any key to restart.");
     playSound("wrong");
-
     // console.log("Wrong");
     startOver();
   }

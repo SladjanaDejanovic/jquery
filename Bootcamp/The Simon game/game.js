@@ -4,14 +4,6 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-//////////// my way for using audio
-// const playSound = function (color) {
-//   const audio = $(`#audio-${color}`)[0];
-//   audio.currentTime = 0;
-//   audio.play();
-//   console.log(audio);
-// };
-
 const playSound = function (name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();

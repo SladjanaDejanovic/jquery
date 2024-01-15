@@ -53,8 +53,6 @@ const nextSequence = function () {
     .fadeIn(100)
     .fadeOut(100)
     .fadeIn(100);
-
-  // console.log(gamePattern);
 };
 
 $(".btn").click(function () {
@@ -65,8 +63,6 @@ $(".btn").click(function () {
   animatePress(userChosenColor);
 
   checkAnswer(userClickedPattern.length - 1);
-
-  // console.log(userClickedPattern);
 });
 
 // Restaring after game over

@@ -1,5 +1,5 @@
 $(function () {
-  //.fadeOut("fast"), "slow"), (duration in ms)
+  //.fadeOut("fast"), "slow"), //(duration in ms)
   $("#fadeOutFacebook").click(function () {
     $("#facebook").fadeOut(3000, function () {
       window.alert("Hi!"); // and then adding what happens after element is faded out, in this case it's alert msg

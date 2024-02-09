@@ -42,7 +42,7 @@ $(function () {
   $("#microsoft").dblclick(function () {
     $("#microsoft").hide();
   });
-  // show div on clik:
+  // show div on click:
   $("#showMicrosoft").click(function () {
     $("#microsoft").show();
   });
